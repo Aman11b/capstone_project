@@ -24,3 +24,16 @@ Concepts
 urlencoder -> parses incomming request with URL encoded payload - form submission
 
 CORS 
+
+
+Tables
+Users
+    - id,email,pass,google id,role[user/admin]
+Support task
+    - id, item, status,user_id
+Banners
+    -id,cloudnary unique id(CUD),
+
+
+
+PG package for postgreSQL
