@@ -20,3 +20,7 @@ Concepts
 -> JWT
 -> Middleware
 -> express
+
+urlencoder -> parses incomming request with URL encoded payload - form submission
+
+CORS 
