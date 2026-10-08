@@ -37,3 +37,13 @@ Banners
 
 
 PG package for postgreSQL
+
+
+Resgiter -> Email, password, continue with google
+
+Folder structure
+-> Repository -> DB related logic
+-> Service -> Business logic
+-> Routes -> actual routes based on feature
+-> Root Route FIle -> all routes combined 
+-> Entry File -> Root Route file is used here
