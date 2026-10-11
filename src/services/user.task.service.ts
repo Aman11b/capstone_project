@@ -3,6 +3,7 @@ import {
   createTask,
   fetchTaskByUserId,
   findTaskByIdAndUserId,
+  updateTaskTitle,
 } from "../repositories/user.task.repository";
 import { Task } from "../types/task";
 
@@ -37,6 +38,20 @@ export async function getUserTaskById(
 ): Promise<Task> {
   const task = await findTaskByIdAndUserId(taskId, userId);
 
+  if (!task) {
+    throw new AppError(404, "Task not found");
+  }
+
+  return task;
+}
+
+export async function updateUserTask(
+  taskId: string,
+  userId: string,
+  title: unknown,
+): Promise<Task | null> {
+  const validTitle = validateTitle(title);
+  const task = await updateTaskTitle(taskId, userId, validTitle);
   if (!task) {
     throw new AppError(404, "Task not found");
   }
